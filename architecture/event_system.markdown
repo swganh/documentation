@@ -2,7 +2,7 @@
 
 Massively multiplayer online games are by necessity big. Really, really big. Think about all the different categories of features that make up these games (referred to in the MMOServer code as **Services**): crafting, combat, chat, trading, movement... and the list goes on. With something on this scale traditional single threaded game programming techniques go right out the window, server code is almost guaranteed to be run on multiple cores/processors if not multiple physical machines.
 
-With code potentially running from another physical machine how on earth are these services suppose to communicate with one another? And, how do these services communicate with one another without developing a tight coupling on specific implementations? To answer these questions lets look at the requirements necessary for communicating between two services.
+With code potentially running from another physical machine how on earth are these services suppose to communicate with one another? And, how do these services communicate with one another without developing a tight coupling on each other's specific implementations? To answer these questions lets look at the requirements necessary for communicating between services.
 
 ###Communication is key###
 
