@@ -6,7 +6,7 @@ With code potentially running from another physical machine how on earth are the
 
 ###Communication is key###
 
-There are two ways in which services needs to communicate with other aspects of the server: to inform an unknown number of interested parties that something significant has occurred (**Event Dispatch**) and to make requests directly to a specific type of service (**Service Locator**). This article focuses on the motivation behind the Event Dispatch and common usage patterns to help you quickly get up to speed with one of the most vital components of the SWG:ANH MMOServer engine.
+There are two ways in which services needs to communicate with other aspects of the server: to inform an unknown number of interested parties that something significant has occurred (via the **Event Dispatch**) and to make requests directly to a specific type of service (via the **Service Locator**). This article focuses on the motivation behind the Event Dispatch and common usage patterns to help you quickly get up to speed with one of the most vital components of the SWG:ANH MMOServer engine.
 
 
   Discuss a concrete example that will be used throughout the article to  explore the Event systems functionality and the general motivation behind it.
