@@ -46,3 +46,11 @@ There is one gotcha here with int8/uint8, they should be replaced with char/unsi
 ###Simplify overly verbose logic###
 
 Take the time to fully understand the purpose of any function/method you are currently looking at. Once you know why it exists take a closer look at how the problem was originally solved. Often times our legacy code was written on code binges where constant tweaks were made to get things working and then never reviewed before making it into the main source line. There are many places still where hundreds of lines of code can be shrunk to tens of lines (or less).
+
+###Add missing api documentation###
+
+Before the start of this initiative there existed almost no API documentation. In order to change this and build up a useful base of documentation whenever entering into an existing function/method take the time to understand what it's purpose is and then add a Doxygen style doc above its declaration.
+
+###Remove usages of BString as you come across them###
+
+BString is evil, its interface makes it far to easy to use incorrectly and is the source of many crashes and weird behaviors. In almost all cases the standard library strings are a perfect replacement.
