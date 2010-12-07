@@ -54,3 +54,7 @@ Before the start of this initiative there existed almost no API documentation. I
 ###Remove usages of BString as you come across them###
 
 BString is evil, its interface makes it far to easy to use incorrectly and is the source of many crashes and weird behaviors. In almost all cases the standard library strings are a perfect replacement.
+
+###Remove commented sections of code###
+
+We have vast spans of code that is just commented out, completely polluting up files and hindering the readability of code. If code shouldn't be there, remove it. Don't comment on how silly it is and leave it there as a testimony to the ignorance of others... nobody really cares. Just remove the code and clean up our source. And don't worry about losing any information, our projects and all their history are always available thanks to Git, just browse a files history to see its previous states.
