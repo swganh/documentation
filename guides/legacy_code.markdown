@@ -58,3 +58,20 @@ BString is evil, its interface makes it far to easy to use incorrectly and is th
 ###Remove commented sections of code###
 
 We have vast spans of code that is just commented out, completely polluting up files and hindering the readability of code. If code shouldn't be there, remove it. Don't comment on how silly it is and leave it there as a testimony to the ignorance of others... nobody really cares. Just remove the code and clean up our source. And don't worry about losing any information, our projects and all their history are always available thanks to Git, just browse a files history to see its previous states.
+
+###Reduce dynamic_cast checks with getType###
+
+The getType available on objects returns the class of object you're dealing with, this is essentially an integer comparison and is much cheaper than a dynamic_cast. Often this check cannot replace a dynamic\_cast entirely, however, it can reduce how frequently it gets called. 
+
+For example if you're in a loop and you only want to perform the task if the object is of a certain type then use getType to do the type check. Then, only if the check has passed, is a dynamic_cast performed which can save significant processing time.
+
+	std::for_each(object_list.begin(), object_list.end(), [=] (Object* object) {
+	    // Check the type first before committing to any significant processing time.
+	    if(object->getType() != ObjType_Player) {
+	        return;
+	    }
+
+	    // The check has passed, now do the cast and continue working.
+	    PlayerObject* player = dynamic_cast<PlayerObject*>(object);
+	    ...
+	});
