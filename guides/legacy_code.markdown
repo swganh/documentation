@@ -71,7 +71,7 @@ For example if you're in a loop and you only want to perform the task if the obj
 	        return;
 	    }
 
-	    // The check has passed, now do the cast and continue working.
-	    PlayerObject* player = dynamic_cast<PlayerObject*>(object);
+	    // The check has passed, now do a static cast since we know the type and continue working.
+	    PlayerObject* player = static_cast<PlayerObject*>(object);
 	    ...
 	});
