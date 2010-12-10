@@ -13,6 +13,7 @@ When writing source or accepting it in ensure that it fits with the agreed upon 
 *   Exceptions are allowed
 *   C++0x libraries are allowed (and encouraged)
 *   Enums must be ALL_CAPS_WITH_UNDERSCORES
+*   Non accessor/mutator functions should be camel case starting with a lower case, non-numeric character
 *   Documenting comments in headers should follow the Doxygen format
 *   Indent by 4 spaces instead of 2
 *   No indentation before public, protected, private
