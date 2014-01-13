@@ -1,1 +1,0 @@
-#SWG:ANH Coding Standards#
